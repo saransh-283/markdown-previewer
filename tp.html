@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resizer</title>
+</head>
+
+<body>
+    <div id="main">
+        <div id="editor-pane"></div>
+        <div id="resizer"></div>
+        <div id="preview-pane"></div>
+    </div>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            width: 100%;
+        }
+
+        @media(max-width:768px) {
+            #main {
+                flex-direction: column;
+            }
+
+            #resizer {
+                background: black;
+                height: .5vh !important;
+                width: 100vw !important;
+            }
+
+            #resizer:hover {
+                cursor: default !important;
+            }
+
+            #editor-pane {
+                background: red;
+                height: 29.5vh !important;
+                width: 100vw !important;
+            }
+
+            #preview-pane {
+                background: blue;
+                height: 70vh !important;
+                width: 100vw !important;
+            }
+        }
+
+        #resizer {
+            background: black;
+            width: .5vw;
+            height: 100vh;
+        }
+
+        #resizer:hover {
+            cursor: ew-resize;
+        }
+
+        #editor-pane {
+            background: red;
+            width: 29.5vw;
+            height: 100vh;
+        }
+
+        #preview-pane {
+            background: blue;
+            width: 70vw;
+            height: 100vh;
+        }
+    </style>
+
+    <script type='text/javascript'>
+        const editor = document.getElementById('editor-pane')
+        const resizer = document.getElementById('resizer')
+        const preview = document.getElementById('preview-pane')
+        const viewport = document.getElementsByTagName('body')[0]
+        const main = document.getElementById('main')
+        const styleTag = document.getElementsByTagName('style')[0]
+
+
+        var viewportWidth
+        var initialEditorWidth
+
+
+        function resizerMouseDown() {
+            viewportWidth = viewport.getBoundingClientRect().width
+            initialEditorWidth = resizer.getBoundingClientRect().width
+
+            document.body.addEventListener('mousemove', documentMouseMove)
+            document.body.addEventListener('mouseup', documentMouseUp)
+        }
+
+        function documentMouseMove(e) {
+            mousePosition = e.clientX
+
+            editor.style.width = `${(mousePosition*100/viewportWidth)}vw`
+            preview.style.width = `${100-(mousePosition*100/viewportWidth)}vw`
+        }
+
+        function documentMouseUp() {
+            document.body.removeEventListener('mousemove', documentMouseMove)
+        }
+
+        resizer.addEventListener('mousedown', resizerMouseDown)
+    </script>
+
+</body>
+
+</html>
