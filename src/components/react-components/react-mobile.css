@@ -1,0 +1,25 @@
+@media(max-width:768px) {
+    #main {
+        flex-direction: column;
+    }
+
+    #resizer {
+        background: black;
+        height: .5vh !important;
+        width: 100vw !important;
+    }
+
+    #resizer:hover {
+        cursor: default !important;
+    }
+
+    #editor-pane {
+        height: 29.5vh !important;
+        width: 100vw !important;
+    }
+
+    #preview-pane {
+        height: 70vh !important;
+        width: 100vw !important;
+    }
+}

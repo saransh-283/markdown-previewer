@@ -1,9 +1,32 @@
 #main {
     display: flex;
+    flex-direction: row;
     height: 100%;
     width: 100%;
 }
 
+#resizer {
+    background: black;
+    width: .5vw;
+    height: 100vh;
+}
+
+#resizer:hover {
+    cursor: ew-resize;
+}
+
+#editor-pane {
+    width: 29.5vw;
+    height: 100vh;
+}
+
+#preview-pane {
+    width: 70vw;
+    height: 100vh;
+}
+
 #editor {
+    height: 100vh !important;
+    width: 100%;
     resize: none;
 }
