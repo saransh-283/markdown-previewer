@@ -1,3 +1,8 @@
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
 #main {
     display: flex;
     flex-direction: row;
@@ -17,16 +22,26 @@
 
 #editor-pane {
     width: 29.5vw;
-    height: 100vh;
+    height: 90vh;
 }
 
 #preview-pane {
     width: 70vw;
-    height: 100vh;
+    height: 90vh;
+    overflow: scroll;
+    background: #f6f6f6;
+    padding: 5px;
 }
 
 #editor {
-    height: 100vh !important;
+    height: 90vh !important;
     width: 100%;
     resize: none;
+    background: #f6f6f6;
+    padding: 5px;
+    border: none;
+}
+
+#editor:focus {
+    outline: none;
 }

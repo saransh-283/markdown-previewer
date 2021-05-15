@@ -4,3 +4,19 @@ body {
     padding: 0;
     overflow: hidden;
 }
+
+pre,
+code {
+    background: #fff;
+}
+
+table,
+th,
+td {
+    border: 1px solid black !important;
+    padding: 10px 15px;
+}
+
+head {
+    background: red;
+}

@@ -13,13 +13,14 @@
         cursor: default !important;
     }
 
-    #editor-pane {
+    #editor-pane,
+    #editor {
         height: 29.5vh !important;
         width: 100vw !important;
     }
 
     #preview-pane {
-        height: 70vh !important;
+        height: 60vh !important;
         width: 100vw !important;
     }
 }

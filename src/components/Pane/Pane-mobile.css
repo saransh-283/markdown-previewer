@@ -1,0 +1,6 @@
+@media (max-width:768px) {
+    #navbarDropdown {
+        width: fit-content;
+        padding: 5px 15px;
+    }
+}
