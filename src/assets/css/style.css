@@ -8,6 +8,7 @@ body {
 pre,
 code {
     background: #fff;
+    color: #e83e8c;
 }
 
 table,
@@ -19,4 +20,39 @@ td {
 
 head {
     background: red;
+}
+
+/** Top-pane */
+.navbar-custom {
+    width: 100vw;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background: rgb(197, 197, 197);
+}
+
+.dropdown-menu {
+    width: 25rem;
+    margin: .9rem 0 0 -23.2rem;
+    border-radius: 0;
+    height: 30rem;
+    overflow: scroll;
+    padding: 5px;
+    background: #ddd;
+}
+
+
+
+#nav-list>ul {
+    list-style-type: none;
+}
+
+#nav-list>ul>li {
+    float: left;
+}
+
+#dropdownId {
+    color: inherit;
 }

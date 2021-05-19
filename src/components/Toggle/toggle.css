@@ -1,0 +1,41 @@
+.toggle {
+    height: 1.6rem;
+    width: 3rem;
+    border-radius: 50px;
+    margin-left: 2rem;
+    border: 1px solid black;
+    background: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.notch {
+    background: rgb(34, 34, 34);
+    border-radius: 50%;
+    height: 1.2rem;
+    width: 1.2rem;
+    position: absolute;
+    top: .14rem;
+    left: .1rem;
+    box-shadow: 0 0 1px rgb(34, 34, 34);
+    transition: all 0.3s ease;
+}
+
+.toggle.true {
+    background: #2bc210;
+}
+
+.toggle.true .notch {
+    background: rgb(233, 233, 233);
+    border-radius: 50%;
+    height: 1.2rem;
+    width: 1.2rem;
+    position: absolute;
+    top: .14rem;
+    left: .1rem;
+    box-shadow: 0 0 1px rgb(233, 233, 233);
+}
+
+.true>.notch {
+    transform: translate(1.4rem, 0);
+}

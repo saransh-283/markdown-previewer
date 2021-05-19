@@ -14,6 +14,180 @@
 </head>
 
 <body>
+    <nav class="navbar-custom">
+        <div>
+            Markdown Previewer
+        </div>
+        <div id="nav-list">
+            <ul>
+                <li class="nav-item dropdown">
+                    <a href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <!-- Syntax -->
+                        <h3 id="desc-head">Syntax</h3>
+
+                        <h4>Headings</h4>
+                        <p>To insert heading tags <code>
+                                &lt;h1&gt;&lt;/h1&gt;
+                            </code>,<code>
+                                &lt;h2&gt;&lt;/h2&gt;
+                            </code>,<code>
+                                &lt;h3&gt;&lt;/h3&gt;
+                            </code>,<code>
+                                &lt;h4&gt;&lt;/h4&gt;
+                            </code>,<code>
+                                &lt;h5&gt;&lt;/h5&gt;
+                            </code>,<code>
+                                &lt;h6&gt;&lt;/h6&gt;
+                            </code>, type &num; 1/2/3/4/5/6 times follwed by space and your text (<code>&num;</code> for <code>&lt;h1&gt;</code>,<code>&num;&num;</code> for <code>&lt;h2&gt;</code> and so on)</p>
+                        <p>Example:</p>
+                        <code>
+                            <p><code>&num; This is &lt;h1&gt;&lt;/h1&gt; heading.</code></p>
+                            <p><code>&num;&num; This is &lt;h2&gt;&lt;/h2&gt; heading.</code></p>
+                            <p><code>&num;&num;&num; This is &lt;h3&gt;&lt;/h3&gt; heading.</code></p>
+                            <p><code>&num;&num;&num;&num; This is &lt;h4&gt;&lt;/h4&gt; heading.</code></p>
+                            <p><code>&num;&num;&num;&num;&num; This is &lt;h5&gt;&lt;/h5&gt; heading.</code></p>
+                            <p><code>&num;&num;&num;&num;&num;&num; This is &lt;h6&gt;&lt;/h6&gt; heading.</code></p>
+                        </code>
+
+                        <hr>
+
+                        <h4>Text Decoration</h4>
+                        <p>Enclose text in <code>&ast;&ast;</code> to make it bold, <code>&UnderBar;</code> to italicise it, <code>&Tilde;&Tilde;</code> to strikethrough it, blockquotes by <code>&gt; </code> and typing in the text, or combine these for multiple styles</p>
+                        <p>Example:</p>
+                        <code>
+                            <p><code></code>&ast;&ast;Bold Text&ast;&ast;
+                        </code> gives <strong>Bold Text</strong></p>
+                        <p><code>&UnderBar;Italic Text&UnderBar;</code> gives <em>Italic Text</em></p>
+                        <p><code>&Tilde;&Tilde;Strikethrough&Tilde;&Tilde;</code> gives <del>Strikethrough</del></p>
+                        </code>
+
+                        <hr>
+
+                        <h4>Links</h4>
+                        <p>Enclose link text in [] followed by complete URL in ()</p>
+                        <p>Example:</p>
+                        <code>[Google](https://www.google.com/) gives <a href="www.google.com">Google</a></code>
+
+                        <hr>
+
+                        <h4>Tables</h4>
+                        <p>You can add tables using the syntax below (don't forget to add an empty line before and after the table markdown)</p>
+                        <pre>
+Column Header | Column Header | Column Header
+------------- | ------------- | -------------
+Data/Value    | Data/Value    | Data/Value
+Data/Value    | Data/Value    | Data/Value
+                        </pre>
+                        <p>Example Output:</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Column Header</th>
+                                    <th>Column Header</th>
+                                    <th>Column Header</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Data/Value</td>
+                                    <td>Data/Value</td>
+                                    <td>Data/Value</td>
+                                </tr>
+                                <tr>
+                                    <td>Data/Value</td>
+                                    <td>Data/Value</td>
+                                    <td>Data/Value</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <hr>
+
+                        <h4>Unordered lists</h4>
+                        <p>Type <code>&hyphen; </code> follwed by text to make an unordered bulleted list. You can indent the list by adding extra spaces before the <code>&hyphen; </code>.</p>
+                        <p>Example Input:</p>
+                        <code>
+                            <pre>
+- List Item
+  - List Item
+     - List Item
+        - List Item
+                        </pre>
+                        </code>
+                        <p>Example Output:</p>
+                        <ul>
+                            <li>List Item<ul>
+                                    <li>List Item<ul>
+                                            <li>List Item<ul>
+                                                    <li>List Item</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <hr>
+
+                        <h4>Ordered Lists</h4>
+                        <p>Type text preceeded by <code>1. </code> or <code>2. </code> and so on to make a numbered list.</p>
+                        <p>Example Input:</p>
+                        <code>
+                            <pre>
+1. List Item
+2. List Item
+3. List Item
+                            </pre>
+                        </code>
+                        <p>Example Output:</p>
+                        <ol>
+                            <li>List Item</li>
+                            <li>List Item</li>
+                            <li>List Item</li>
+                        </ol>
+
+                        <hr>
+
+                        <h4>Images</h4>
+                        <p>To insert an image, type <code>![<em>alternate</em>](<em>URL-of-image</em>)</code> and replace <code><em>alternate</em></code> by the alternate text you want to display when image is unavailable, and <code><em>URL-of-image</em></code> by the URL address of the image you want to insert.</p>
+                        <p>Example Input:</p>
+                        <code>![Google Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png)</code>
+                        <p>Example Output:</p>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png" alt="Google Logo">
+
+                        <hr>
+
+                        <h4></h4>
+                        <p></p>
+                        <p>Example:</p>
+                        <code></code>
+
+                        <hr>
+
+                        <h4></h4>
+                        <p></p>
+                        <p>Example:</p>
+                        <code></code>
+
+                        <hr>
+
+                        <h4></h4>
+                        <p></p>
+                        <p>Example:</p>
+                        <code></code>
+                    </div>
+                </li>
+                <li id="toggle" class="nav-item">
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div id="render">
 
     </div>

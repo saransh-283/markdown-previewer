@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/f260a15132.js" crossorigin="anonymous"></script>
-    <title>Resizer</title>
+    <title>Toggle</title>
 </head>
 
 <body>
@@ -87,103 +87,10 @@
 
 
     <style>
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        #main {
-            display: flex;
-            flex-direction: row;
-            height: 100%;
-            width: 100%;
-        }
-
-        @media(max-width:768px) {
-            #main {
-                flex-direction: column;
-            }
-
-            #resizer {
-                background: black;
-                height: .5vh !important;
-                width: 100vw !important;
-            }
-
-            #resizer:hover {
-                cursor: default !important;
-            }
-
-            #editor-pane {
-                background: red;
-                height: 29.5vh !important;
-                width: 100vw !important;
-            }
-
-            #preview-pane {
-                background: blue;
-                height: 70vh !important;
-                width: 100vw !important;
-            }
-        }
-
-        #resizer {
-            background: black;
-            width: .5vw;
-            height: 100vh;
-        }
-
-        #resizer:hover {
-            cursor: ew-resize;
-        }
-
-        #editor-pane {
-            background: red;
-            width: 29.5vw;
-            height: 100vh;
-        }
-
-        #preview-pane {
-            background: blue;
-            width: 70vw;
-            height: 100vh;
-        }
     </style>
 
     <script type='text/javascript'>
-        const editor = document.getElementById('editor-pane')
-        const resizer = document.getElementById('resizer')
-        const preview = document.getElementById('preview-pane')
-        const viewport = document.getElementsByTagName('body')[0]
-        const main = document.getElementById('main')
-        const styleTag = document.getElementsByTagName('style')[0]
 
-
-        var viewportWidth
-        var initialEditorWidth
-
-
-        function resizerMouseDown() {
-            viewportWidth = viewport.getBoundingClientRect().width
-            initialEditorWidth = resizer.getBoundingClientRect().width
-
-            document.body.addEventListener('mousemove', documentMouseMove)
-            document.body.addEventListener('mouseup', documentMouseUp)
-        }
-
-        function documentMouseMove(e) {
-            mousePosition = e.clientX
-
-            editor.style.width = `${(mousePosition*100/viewportWidth)}vw`
-            preview.style.width = `${100-(mousePosition*100/viewportWidth)}vw`
-        }
-
-        function documentMouseUp() {
-            document.body.removeEventListener('mousemove', documentMouseMove)
-        }
-
-        resizer.addEventListener('mousedown', resizerMouseDown)
     </script>
 
 </body>

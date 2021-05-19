@@ -1,6 +1,6 @@
 import React from 'react';
 import marked from 'marked'
-import Pane from '../Pane/Pane'
+//import Pane from '../Pane/Pane'
 import './react-style.css'
 import './react-mobile.css'
 
@@ -57,7 +57,6 @@ class Markdown extends React.Component {
 
     render() {
         return <div>
-            <Pane />
             <div id="main">
                 <div id="editor-pane" style={{ width: this.state.editorWidth }}>
                     <textarea onChange={this.handleChange} value={this.state.text} id="editor"></textarea>

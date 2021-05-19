@@ -1,0 +1,19 @@
+body.true .navbar-custom,
+body.true #resizer {
+    background: #202050;
+    color: white;
+}
+
+body.true textarea,
+body.true #preview-pane {
+    background: #303080 !important;
+    color: white;
+}
+
+
+b #preview pre code,
+body.true.true #preview pre,
+body.true #preview code {
+    background: #404080;
+    color: #e83e8c;
+}
