@@ -10,12 +10,14 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f260a15132.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <nav class="navbar-custom">
-        <div>
+        <div id="page-title">
             Markdown Previewer
         </div>
         <div id="nav-list">
@@ -26,22 +28,12 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropdownId">
                         <!-- Syntax -->
-                        <h3 id="desc-head">Syntax</h3>
+                        <h2 id="desc-head" class="text-center">Syntax</h2>
+
+                        <hr>
 
                         <h4>Headings</h4>
-                        <p>To insert heading tags <code>
-                                &lt;h1&gt;&lt;/h1&gt;
-                            </code>,<code>
-                                &lt;h2&gt;&lt;/h2&gt;
-                            </code>,<code>
-                                &lt;h3&gt;&lt;/h3&gt;
-                            </code>,<code>
-                                &lt;h4&gt;&lt;/h4&gt;
-                            </code>,<code>
-                                &lt;h5&gt;&lt;/h5&gt;
-                            </code>,<code>
-                                &lt;h6&gt;&lt;/h6&gt;
-                            </code>, type &num; 1/2/3/4/5/6 times follwed by space and your text (<code>&num;</code> for <code>&lt;h1&gt;</code>,<code>&num;&num;</code> for <code>&lt;h2&gt;</code> and so on)</p>
+                        <p>To insert heading tags <code>&lt;h1&gt;&lt;/h1&gt;</code>, <code>&lt;h2&gt;&lt;/h2&gt;</code>, <code>&lt;h3&gt;&lt;/h3&gt;</code>, <code>&lt;h4&gt;&lt;/h4&gt;</code>, <code>&lt;h5&gt;&lt;/h5&gt;</code>, <code>&lt;h6&gt;&lt;/h6&gt;</code>, type &num; 1/2/3/4/5/6 times follwed by space and your text (<code>&num;</code> for <code>&lt;h1&gt;</code>, <code>&num;&num;</code> for <code>&lt;h2&gt;</code> and so on)</p>
                         <p>Example:</p>
                         <code>
                             <p><code>&num; This is &lt;h1&gt;&lt;/h1&gt; heading.</code></p>
@@ -69,7 +61,7 @@
                         <h4>Links</h4>
                         <p>Enclose link text in [] followed by complete URL in ()</p>
                         <p>Example:</p>
-                        <code>[Google](https://www.google.com/) gives <a href="www.google.com">Google</a></code>
+                        <code>[Google](https://www.google.com/)</code> gives <code><a href="www.google.com">Google</a></code>
 
                         <hr>
 
@@ -79,8 +71,7 @@
 Column Header | Column Header | Column Header
 ------------- | ------------- | -------------
 Data/Value    | Data/Value    | Data/Value
-Data/Value    | Data/Value    | Data/Value
-                        </pre>
+Data/Value    | Data/Value    | Data/Value</pre>
                         <p>Example Output:</p>
                         <table>
                             <thead>
@@ -114,8 +105,7 @@ Data/Value    | Data/Value    | Data/Value
 - List Item
   - List Item
      - List Item
-        - List Item
-                        </pre>
+        - List Item</pre>
                         </code>
                         <p>Example Output:</p>
                         <ul>
@@ -140,8 +130,7 @@ Data/Value    | Data/Value    | Data/Value
                             <pre>
 1. List Item
 2. List Item
-3. List Item
-                            </pre>
+3. List Item</pre>
                         </code>
                         <p>Example Output:</p>
                         <ol>
@@ -155,30 +144,13 @@ Data/Value    | Data/Value    | Data/Value
                         <h4>Images</h4>
                         <p>To insert an image, type <code>![<em>alternate</em>](<em>URL-of-image</em>)</code> and replace <code><em>alternate</em></code> by the alternate text you want to display when image is unavailable, and <code><em>URL-of-image</em></code> by the URL address of the image you want to insert.</p>
                         <p>Example Input:</p>
-                        <code>![Google Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png)</code>
+                        <code>![Google Logo](https://rosenfeldmedia.com/designopssummit2018/wp-content/uploads/sites/10/2018/09/google-logo-300x300.png)</code>
                         <p>Example Output:</p>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png" alt="Google Logo">
+                        <img src="https://rosenfeldmedia.com/designopssummit2018/wp-content/uploads/sites/10/2018/09/google-logo-300x300.png" alt="Google Logo">
 
                         <hr>
 
-                        <h4></h4>
-                        <p></p>
-                        <p>Example:</p>
-                        <code></code>
 
-                        <hr>
-
-                        <h4></h4>
-                        <p></p>
-                        <p>Example:</p>
-                        <code></code>
-
-                        <hr>
-
-                        <h4></h4>
-                        <p></p>
-                        <p>Example:</p>
-                        <code></code>
                     </div>
                 </li>
                 <li id="toggle" class="nav-item">

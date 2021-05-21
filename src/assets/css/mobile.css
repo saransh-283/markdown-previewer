@@ -4,4 +4,8 @@
         width: 19rem;
         margin: .9rem 0 0 -14.1rem;
     }
+
+    #page-title {
+        font-size: 1.3rem;
+    }
 }

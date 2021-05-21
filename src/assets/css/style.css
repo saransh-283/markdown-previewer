@@ -5,6 +5,12 @@ body {
     overflow: hidden;
 }
 
+#page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
 pre,
 code {
     background: #fff;
@@ -25,21 +31,22 @@ head {
 /** Top-pane */
 .navbar-custom {
     width: 100vw;
-    height: 3rem;
+    height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
     background: rgb(197, 197, 197);
+    border-bottom: 1px solid #000;
 }
 
 .dropdown-menu {
-    width: 25rem;
-    margin: .9rem 0 0 -23.2rem;
+    width: 30rem;
+    margin: 1.3rem 0 0 -28.2rem;
     border-radius: 0;
     height: 30rem;
     overflow: scroll;
-    padding: 5px;
+    padding: 10px;
     background: #ddd;
 }
 
